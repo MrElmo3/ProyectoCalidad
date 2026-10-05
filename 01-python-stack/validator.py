@@ -3,4 +3,6 @@ def es_valida(password):
         return False
     if not any(c.isdigit() for c in password):
         return False
+    if not any(c.isupper() for c in password):
+        return False
     return True
