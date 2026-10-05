@@ -8,3 +8,6 @@ def test_rechaza_sin_digito():
 
 def test_rechaza_sin_mayuscula():
     assert es_valida("abc12345") is False
+
+def test_acepta_password_valida():
+    assert es_valida("Abcd1234") is True
