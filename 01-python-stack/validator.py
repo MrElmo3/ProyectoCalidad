@@ -1,8 +1,7 @@
-def es_valida(password):
+import re
+
+
+def es_valida(password: str) -> bool:
     if len(password) < 8:
         return False
-    if not any(c.isdigit() for c in password):
-        return False
-    if not any(c.isupper() for c in password):
-        return False
-    return True
+    return bool(re.search(r"\d", password)) and bool(re.search(r"[A-Z]", password))
