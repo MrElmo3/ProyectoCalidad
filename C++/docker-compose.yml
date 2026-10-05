@@ -1,0 +1,10 @@
+services:
+  cpp-env:
+    build: .
+    container_name: cpp_calidad_container
+    ports:
+      - "8088:8088"
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    restart: unless-stopped
